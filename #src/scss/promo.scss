@@ -1,0 +1,98 @@
+
+@media (max-width: $mobile-width-only) { 
+    .promo {
+        color: #ffffff;
+        text-align: center;
+        background-image: url(../img/index-can-mobile.png) ,url(../img/index-background-mobile.jpg);
+        background-size: 280px 270px, 320px 305px;
+        background-repeat: no-repeat;
+        background-position: 20px 167px, top center;
+        padding-bottom: 22px;
+        &__title {
+            font-size: 36px;
+            line-height: 36px;
+            padding-top: 27px;
+            font-weight: normal;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 14px;
+            text-transform: uppercase;
+            margin-top: 25px;
+            color: #dbedd0;
+        }
+        &__button {
+            width: 280px;
+            background-color: #64a83b;
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 18px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+            margin-top: 302px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+         .promo {
+            background-image: url(../img/index-can-mobile@2x.png), url(../img/index-background-mobile@2x.jpg);
+            }   
+        }
+    }
+}  
+
+@media (min-width:$tablet-width) {
+    .promo {
+        min-height: 820px;
+        text-align: left;
+        background-image: url(../img/index-can-tablet.jpg);
+        background-repeat: no-repeat;
+        background-position: 29px 211px;
+        padding-left: 119px;
+        padding-bottom: 0;
+        &__title {
+            width: 430px;
+            font-size: 60px;
+            line-height: 60px;
+            padding-top: 10px;
+            font-weight: normal;
+        }
+        &__text {
+            font-size: 20px;
+            line-height: 20px;
+            text-transform: uppercase;
+            margin-top: 42px;
+        }
+        &__button {
+            width: 245px;
+            background-color: #64a83b;
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 20px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            margin-top: 47px;
+            text-align: center;
+        }
+         @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+            .promo {
+                background-image: url(../img/index-can-tablet@2x.jpg);
+            }  
+        }  
+    }
+}    
+
+@media (min-width:$desktop-width) {
+    .promo {
+        min-height: 646px;
+        background-image: none;
+        padding-bottom: 0;
+        padding-left: 190px;
+        &__title {
+            padding-top: 93px;
+        }   
+        &__button {
+            margin-top: 51px;
+        }             
+    }        
+}

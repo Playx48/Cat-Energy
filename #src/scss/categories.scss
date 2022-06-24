@@ -1,0 +1,178 @@
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    &__loss, &__gain {
+        position: relative;
+        box-sizing: border-box;
+        width: 280px;
+        background-color: #f2f2f2;
+        padding-left: 20px;
+        padding-right: 32px;
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 56px;
+            left: 20px;
+            right: 19px;
+            height: 1px;
+            background-color: #d9d9d9;
+        }
+    }
+    &__loss {
+        background-image: url(../img/icon-cat-slim.svg), url(../img/Ellipse.png);
+        background-repeat: no-repeat;
+        background-size: 35px 49px, 50px 50px;
+        background-position: 30px 22px, 22px 25px;
+    }
+    &__gain {
+        margin-top: 20px;
+        background-image: url(../img/icon-cat-pro.svg), url(../img/Ellipse.png);
+        background-repeat: no-repeat;
+        background-size: 67px 28px, 50px 50px;
+        background-position: 13px 36px, 22px 25px;
+    }
+    &__title {
+        margin-top: 30px;
+        padding-left: 71px;
+        font-size: 24px;
+        line-height: 37px;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    &__text {
+        font-family: Arial, sans-serif;
+        margin-top: 30px;
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 22px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 16px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+    &__arrow {
+        margin-left: 8px;
+        margin-bottom: 2px;
+    }
+    &__link:hover &__arrow {
+        transform: translateX(5px);
+    }
+    @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+        .categories {
+            &__loss {
+                background-image: url(../img/icon-cat-slim.svg), url(../img/Ellipse@2x.png);
+            }    
+            &__gain {
+                background-image: url(../img/icon-cat-pro.svg), url(../img/Ellipse@2x.png);
+            }
+        }
+    }        
+}
+
+@media (min-width: $tablet-width) {
+    .categories {
+        flex-direction: column;
+        padding-left: 0;
+        &__loss, &__gain {
+            width: 708px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 50px;
+            padding-right: 280px;
+            padding-bottom: 42px;
+            &::after {
+                display: none;
+            }
+        }    
+        &__loss {
+            background-image: url(../img/icon-cat-slim.svg), url(../img/Ellipse-tablet.png);
+            background-repeat: no-repeat;
+            background-size: 140px 194px, 200px 200px;
+            background-position: 476px 80px, 446px 92px;
+        }
+        &__gain {
+            margin-top: 30px;
+            padding-right: 312px;
+            background-image: url(../img/icon-cat-pro.svg), url(../img/Ellipse-tablet.png);
+            background-repeat: no-repeat;
+            background-size: 268px 112px, 200px 200px;
+            background-position: 412px 135px, 448px 91px;
+        }    
+        &__title {
+            margin-top: 76px;
+            padding-left: 3px;
+            font-size: 36px;
+            line-height: 37px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        &__text {
+            margin-top: 25px;
+            padding-left: 2px;
+            font-size: 16px;
+            line-height: 24px;
+        }   
+        &__link {
+            margin-top: 36px;
+            padding-top: 20px;
+            padding-left: 2px;
+            padding-bottom: 20px;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__arrow {
+            margin-left: 20px;
+            margin-bottom: 3px;
+        }
+        @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+            .categories {
+                &__loss {
+                    background-image: url(../img/icon-cat-slim.svg), url(../img/Ellipse-tablet@2x.png);
+                }    
+                &__gain {
+                    background-image: url(../img/icon-cat-pro.svg), url(../img/Ellipse-tablet@2x.png);
+                }
+            }
+        }           
+    }    
+}
+
+@media (min-width: $desktop-width) {
+    .categories {
+        width: 1220px;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+        &__loss, &__gain {
+            width: 570px;
+        }
+        &__loss {
+            margin-left: 0;
+            padding-right: 53px;
+            background-image: url(../img/icon-cat-slim.svg), url(../img/Ellipse-tablet.png);
+            background-size: 70px 97px, 100px 100px;
+            background-position: 66px 41px, 52px 47px;
+        }    
+        &__gain {
+            margin-top: 0;
+            margin-right: 0;
+            padding-right: 72px;
+            background-image: url(../img/icon-cat-pro.svg), url(../img/Ellipse-tablet.png);
+            background-size: 134px 56px, 100px 100px;
+            background-position: 34px 69px, 52px 47px;
+        } 
+        &__title {
+            padding-left: 163px;
+        }
+        &__text {
+            margin-top: 74px;
+        }
+        &__link {
+            margin-top: 11px;
+        }
+    }      
+}

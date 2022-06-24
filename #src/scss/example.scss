@@ -1,0 +1,374 @@
+@media (max-width: $mobile-width-only) {
+  .example {
+    min-height: 705px;
+    background-color: #f2f2f2;
+    &__title {
+      @include mobile-title;
+      padding-top: 17px;
+    }
+    &__text {
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 23px;
+      padding-left: 20px;
+      padding-right: 25px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  } 
+  .info {
+    margin-top: 25px;
+    &__list {
+      width: 281px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__item {
+      width: 125px;
+      text-align: center;
+      padding-top: 14px;
+      background-image: url(../img/example-border2.png), url(../img/example-border1.png);
+      background-repeat: no-repeat;
+      background-position: 18px 50px,0 0;
+    }
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+    &__text {
+      width: 60px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+    }
+    &__cash {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 20px;
+    }
+  } 
+  .slider {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 42px;
+    input[type="radio"] {
+    display: none;
+    }
+    &__inner {
+      overflow: hidden;
+    }
+    &__label {
+      position: relative;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      &:active {
+        opacity: 0.7;
+        /*transition: 1s;*/
+      }
+    }
+    &__controls {
+      display: flex;
+      width: 198px;
+      justify-content: space-between;
+      position: absolute;
+      content: "";
+      top: 265px;
+      left: 63px;
+      z-index: 10;
+      background-image: url(../img/scale.png);
+      background-repeat: no-repeat;
+      background-position: 56px 2px;
+    }
+  }
+  .slides { 
+    display: flex;
+    width: 640px;
+    transition: transform 0.8s ease;
+    &__fat, &__thin {
+      width: 320px;
+      height: 230px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &__fat {
+      background-image: url(../img/before-mobile.png);
+    }
+    &__thin {
+      background-image: url(../img/after-mobile.png);
+      background-position: 30px 0;
+    }
+  }
+  
+  #btn-1:checked ~ .slider__inner .slides {
+    transform: translate(0);
+  }
+  #btn-2:checked ~ .slider__inner .slides {
+    transform: translate(-320px);
+  }
+  
+  #btn-1:checked ~ .slider__controls label[for="btn-1"]::before, 
+  #btn-2:checked ~ .slider__controls label[for="btn-2"]::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #68b738;
+    top: 6px;
+  }
+  #btn-1:checked ~ .slider__controls label[for="btn-1"]::before {
+    left: 62px;
+  }
+  #btn-2:checked ~ .slider__controls label[for="btn-2"]::before {
+    right: 64px;
+  }
+
+  @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+    .slides__fat {
+      background-image: url(../img/before-mobile@2x.png);
+    }
+    .slides__thin {
+      background-image: url(../img/after-mobile@2x.png);
+    }  
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background: linear-gradient(to bottom,#ffffff 57%,#f2f2f2 57%);
+    padding-bottom: 131px;
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      width: 708px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__title {
+      @include tablet-title;
+      padding-top: 42px;
+      padding-left: 30px;
+    }
+    &__text {
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 65px;
+      padding-left: 30px;
+      padding-right: 55px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  } 
+  .info {
+    margin-top: 53px;
+    &__list {
+      width: 366px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      width: 162px;
+      text-align: center;
+      padding-top: 15px;
+      background-repeat: no-repeat;
+      &--1 {
+        background-image: url(../img/example-tablet3.png),url(../img/example-tablet1.png); 
+        background-position: 24px 50px, 0 0;
+      }
+      &--2 {
+        background-image: url(../img/example-tablet2.png),url(../img/example-tablet1.png); 
+        background-position: 10px 50px, 0 0;
+      }
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 37px;
+      text-transform: uppercase;
+    }
+    &__text {
+      width: 130px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 11px;
+    }
+    &__cash {
+      width: 180px;
+      text-transform: uppercase;
+      text-align: right;
+      margin-top: 6px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  } 
+  .slider {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 80px;
+    input[type="radio"] {
+    display: none;
+    }
+    &__inner {
+      width: 767px;
+      overflow: hidden;
+    }
+    &__label {
+      position: relative;
+      padding-bottom: 5px;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      border-bottom: 1px dotted grey;
+      &:active {
+        opacity: 0.7;
+      }
+    }
+    &__controls {
+      display: flex;
+      width: 570px;
+      justify-content: space-between;
+      position: absolute;
+      content: "";
+      top: 538px;
+      left: 99px;
+      z-index: 10;
+      background-image: url(../img/tablet-scale.png);
+      background-repeat: no-repeat;
+      background-position: center 7px;
+      &::before {
+        position: absolute;
+        content: "";
+        top: -7px;
+        left: 273px;
+        box-sizing: border-box;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        border: 1px solid #dcdcdc;
+      }
+     
+      &:active:before {
+        border: 2px solid #68b738;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #68b738;
+      }
+    }
+  }
+  .slides { 
+    display: flex;
+    width: 1534px;
+    transition: transform 0.8s ease;
+    &__fat, &__thin {
+      width: 767px;
+      height: 501px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &__fat {
+      background-image: url(../img/before-tablet.png);
+      background-position: 45px 18px;
+    }
+    &__thin {
+      background-image: url(../img/after-tablet.png);
+      background-position: 55px 0;
+    }
+  }
+  #btn-1:checked ~ .slider__inner .slides {
+    transform: translate(0);
+  }
+  #btn-2:checked ~ .slider__inner .slides {
+    transform: translate(-767px);
+  }
+  
+  @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+    .slides__fat {
+      background-image: url(../img/before-tablet@2x.png);
+    }
+    .slides__thin {
+      background-image: url(../img/after-tablet@2x.png);
+    }  
+  }
+}  
+
+@media (min-width:$desktop-width) {
+  .example {
+    background: linear-gradient(to bottom,#ffffff 32%,#f2f2f2 32%);
+    padding-bottom: 70px;
+    &__wrapper {
+      display: flex;
+    }
+    &__leftside {
+      width: 570px;
+    }
+    &__info {
+      flex-direction: column;
+    }
+    &__info {
+      width: 708px;
+    }
+    &__title {
+      padding-top: 81px;
+      padding-left: 110px;
+    }
+    &__text {
+      width: 435px;
+      margin-top: 146px;
+      padding-left: 110px;
+      padding-right: 0;
+    }
+  } 
+  .info {
+    margin-top: 68px;
+    &__list {
+      width: 366px;
+      margin-left: 110px;
+    }
+    &__item {
+      &--1 {
+        background-image: url(../img/example-tablet4.png),url(../img/example-tablet1.png); 
+        background-position: 24px 50px, 0 0;
+      }
+      &--2 {
+        background-image: url(../img/example-tablet5.png),url(../img/example-tablet1.png); 
+        background-position: 10px 50px, 0 0;
+      }
+    }
+    &__text {
+      margin-top: 11px;
+    }
+    &__cash {
+      width: 335px;
+      text-align: left;
+      margin-top: 50px;
+      margin-left: 110px;
+    }
+    &__sum {
+      padding-left: 60px;
+    }
+  } 
+  .slider {
+    width: 767px;
+    margin-left: 63px;
+    margin-top: 7px;
+    &__controls { 
+      top: 577px;
+      left: 127px;
+    }
+  }
+}

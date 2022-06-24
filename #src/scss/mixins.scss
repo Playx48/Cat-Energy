@@ -1,0 +1,41 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@mixin mobile-title() {
+	font-size: 36px;
+	line-height: 60px;
+	font-weight: normal;
+	padding-left: 20px;
+}
+
+@mixin tablet-title() {
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: normal;
+}
+
+@mixin form-input() {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding-top: 13px;
+	padding-bottom: 12px;
+	color: #444444;
+}
+
+@mixin form-title {
+	position: relative;
+    width: 100%;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #000000;
+}

@@ -1,0 +1,241 @@
+.page-footer {
+    width: 320px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.cooperate {
+    display: flex;
+    padding-top: 28px;
+    padding-bottom: 26px;
+    background-color: #f2f2f2;
+    &__slogan {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 19px;
+        width: 40%;
+    }
+    &__adress {
+        font-family:  "Arial", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        width: 50%;
+        padding-left: 15px;
+    }
+}
+
+.map__source {
+    width: 320px;
+    height: 363px;
+}
+
+.contacts {
+    background-color: #f2f2f2;
+    margin-top: -3px;
+    &__logo {
+        position: relative;
+        text-align: center;
+        padding-top: 35px;
+        padding-bottom: 29px;
+        &::after {
+            position: absolute;
+            content: "";
+            top: 90px;
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            background-color: #d9d9d9;
+        }
+    }
+    &__logo img {
+        width: 128px;
+        height: 24px;
+    }
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 129px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contacts__social {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        top: 62px;
+        left: 20px;
+        right: 20px;
+        height: 1px;
+        background-color: #d9d9d9;
+    }
+}
+
+.contacts svg {
+    fill: #777777;
+}
+
+.contacts svg:focus {
+    fill: #6bb83c;
+    transition: 0.3s;
+}
+
+.contacts svg:hover {
+    fill: #6bb83c;
+    transition: 0.3s;
+}
+
+.contacts svg:active {
+    opacity: 0.75;
+}
+
+.academy {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    &__title {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 16px;
+        color: #444444;
+        margin-top:-5px
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .page-footer {
+        width: 768px;
+    }
+    .cooperate {
+        justify-content: space-between;
+        width: 768px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 63px;
+        padding-bottom: 58px;
+        padding-left: 72px;
+        padding-right: 72px;
+        &__slogan {
+            font-size: 20px;
+            line-height: 25px;
+            padding-left: 0;
+            width: 30%;
+            padding-top: 2px;
+        }
+        &__adress {
+            font-size: 16px;
+            line-height: 20px;
+            width: 30%;
+            padding-left: 15px;
+            text-align: right;
+        }
+        &__spb {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    }
+    .map__source {
+        width: 768px;
+        height: 397px;
+    }
+    .contacts {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        background-color: #f2f2f2;
+        &__logo {
+            margin-right: 150px;
+            padding-top: 0;
+            &::after {
+                display: none;
+            } 
+        }       
+    }
+    .contacts__social {
+        &::after {
+            display: none;
+        }
+    }
+    .academy {
+        width: 163px;
+        margin-right: 0;
+        padding-top: 0px;
+        margin-top: -7px;
+    }
+    .social-list {
+        padding-top: 0;
+        &__vk {
+            width: 31px;
+            height: 16px;
+        }
+        &__inst {
+            width: 23px;
+            height: 23px;
+        }
+        &__fb {
+            width: 14px;
+            height: 28px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-footer {
+        position: relative;
+        width: 1440px;
+        svg {
+            fill: #666666;
+        }
+    }
+    .map__source {
+        width: 1440px;
+        height: 399px;
+    }
+    .cooperate {
+        position: absolute;
+        content: "";
+        top: 93px;
+        left: 110px;
+        width: 571px;
+        box-sizing: border-box;
+        padding-left: 76px;
+        padding-top: 64px;
+        padding-right: 80px;
+        background-color: #ffffff;
+        &__slogan {
+            width: 40%;
+        }
+        &__adress {
+            width: 40%;
+            text-align: left;
+        }    
+    }
+    .contacts {
+        padding-top: 60px;
+        padding-left: 109px;
+        padding-right: 110px;
+        padding-bottom: 50px;
+        &__logo {
+            margin-right: 415px;
+        }    
+    }
+    .academy {
+        margin-top: -2px;
+    }
+}    

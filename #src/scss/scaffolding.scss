@@ -1,0 +1,117 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "Oswald", "Arial", sans-serif;
+	color: #000000; 
+	font-style: normal;
+	
+	background-color: $bg-white;
+	user-select: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+  }
+
+html {
+  overflow-y: scroll;
+}
+
+.button {
+	display: block;
+	border: none;
+	background-color: transparent;
+	box-sizing: border-box;
+	text-transform: uppercase;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+}
+
+a {
+	cursor: pointer;
+	color: #000000;
+	text-decoration: none;
+	&:focus {
+		opacity: 1;
+	}
+	&:hover {
+		opacity: 0.7;
+		transition: 0.7s;
+	}
+	&:active {
+		opacity: 0.5;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+input, textarea {
+    outline: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  	position: absolute;
+  	width: 1px;
+  	height: 1px;
+  	margin: -1px;
+  	border: 0;
+  	padding: 0;
+  	white-space: nowrap;
+  	clip-path: inset(100%);
+  	clip: rect(0 0 0 0);
+  	overflow: hidden;
+}
+
+.page-main,.catalog-main,.form-main {
+    width: 320px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+@media (min-width:$tablet-width) {
+    .page-main,.catalog-main,.form-main {
+       width: 768px;
+	}
+}
+
+@media (min-width:$desktop-width) {
+    .page-main,.catalog-main,.form-main {
+       width: 1440px;
+	}
+}
+
+@media (min-width:$desktop-width) {
+    .page-body {
+		background-image: url(../img/index-can.png), url(../img/index-background-desktop.jpg), linear-gradient(to right, #ffffff 50%, #64a83b 50%);
+       	background-size: auto auto, 720px 696px, auto 696px;
+        background-repeat: no-repeat;
+        background-position: calc(50% + 116px) 142px, top right, top right;
+		@media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+			background-image: url(../img/index-can@2x.png), url(../img/index-background-desktop.jpg@2x.png), linear-gradient(to right, #ffffff 50%, #64a83b 50%);
+			background-size: 552px 499px, 720px 696px, auto 696px;
+        }
+    }
+	.page-main,.catalog-main {
+        width: 1440px;
+	}
+}	
+
+
